@@ -1,0 +1,331 @@
+.App {
+  font-family: DM-Sans;
+  text-align: center;
+  background-color: #f9f3e5;
+  padding-top: 100px;
+}
+
+/* Media Queries */
+/* phone screen */
+@media screen and (max-width: 600px) {
+  .arrange-products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f3e5;
+    padding: 50px;
+  }
+  .single-product {
+    color: black;
+    background-color: #f9f3e5;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .checkout {
+    background-color: #f9f3e5;
+    border-radius: 10px;
+    text-align: center;
+    padding: 70px 70px 700px 70px;
+    margin: 0px 0px 0px 0px;
+    color: #265c4b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .single-product-icons {
+    display: flex;
+    gap: 20px;
+  }
+  .one-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .items-in-cart {
+    background-color: rgb(190, 164, 83);
+    color: black;
+    border-radius: 20px;
+    padding: 20px 0px 20px 0px;
+    margin: 0px 70px 20px 70px;
+    text-align: center;
+  }
+  .cart-img {
+    height: 200px;
+    width: 200px;
+  }
+  .result-items {
+    background-color: #f9f3e5;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* desktop */
+@media screen and (min-width: 600px) {
+  /* need to make a single arrang product for results page */
+  .arrange-products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    background-color: #f9f3e5;
+    padding: 50px;
+    outline-color: red;
+  }
+  .single-product {
+    color: black;
+    background-color: #f9f3e5;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .checkout {
+    background-color: #f9f3e5;
+    border-radius: 10px;
+    text-align: center;
+    padding: 70px 70px 700px 70px;
+    margin: 0px 0px 0px 0px;
+    color: #265c4b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .single-product-icons {
+    display: flex;
+    gap: 20px;
+  }
+  .one-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .items-in-cart {
+    background-color: rgb(190, 164, 83);
+    color: black;
+    border-radius: 20px;
+    padding: 20px 0px 20px 0px;
+    margin: 0px 70px 20px 70px;
+    text-align: center;
+  }
+
+  .result-items {
+    background-color: #f9f3e5;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}
+
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background-color: #f0f0f0;
+  font-family: DM-Sans;
+  text-align: center;
+}
+
+img {
+  border-radius: 20px;
+  width: 250px;
+  height: 250px;
+}
+
+button {
+  /* background-color: rgb(88, 116, 88); */
+  background-color: #f9f3e5;
+  font-family: DM-Sans;
+  color: black;
+  border-radius: 10px;
+  margin-top: 10px;
+  height: 30px;
+  width: 100px;
+}
+
+.search-button {
+  border-radius: 10px;
+  height: 33px;
+  width: 50px;
+  margin-left: 10px;
+  border: 1px solid black;
+}
+
+.single-product input {
+  font-family: DM-Sans;
+  border-radius: 10px;
+  height: 40px;
+  width: 200px;
+  padding-left: 10px;
+}
+
+input {
+  font-family: DM-Sans;
+  border-radius: 10px;
+  height: 33px;
+  width: 200px;
+  padding-left: 10px;
+}
+
+.add-delete {
+  border-radius: 70px;
+  background-color: #e3c75f;
+  color: black;
+  height: 40px;
+  width: 60px;
+  margin-left: 10px;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  outline: none;
+}
+
+.add-to-cart {
+  background-color: #cc8d1a;
+  border-radius: 10px;
+  height: 40px;
+  width: 150px;
+  margin-left: 10px;
+  border: none;
+  outline: none;
+}
+
+.home-link {
+  text-decoration: none;
+  font-family: DM-Sans;
+  color: #265c4b;
+  font-size: 50px;
+  font-weight: bold;
+  padding: 0px 0px 30px 0px;
+}
+
+a:hover {
+  color: rgb(152, 184, 152);
+}
+
+.single-product-back-home {
+  text-decoration: none;
+  font-family: DM-Sans;
+  color: #265c4b;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: goldenrod;
+}
+
+.cart-icon-for-cart {
+  color: #265c4b;
+  font-size: 50px;
+}
+
+.cart-icon {
+  color: #265c4b;
+  font-size: 20px;
+}
+
+.items-in-cart {
+  background-color: rgb(190, 164, 83);
+  color: black;
+  border-radius: 20px;
+  padding: 20px 0px 20px 0px;
+  margin: 0px 70px 20px 70px;
+  text-align: center;
+}
+
+.checkout img {
+  height: 250px;
+  width: 350px;
+  border-radius: 30px;
+}
+
+.cart-text {
+  color: #265c4b;
+  text-align: center;
+}
+
+.cart-screen {
+  background-color: #f9f3e5;
+  padding: 20px 0px 100px 0px;
+  text-align: center;
+}
+
+.purchase-details {
+  text-align: center;
+}
+
+/* pagination */
+
+.pagination {
+  margin: 15px auto;
+  display: flex;
+  justify-content: center;
+  padding: 40px 0px 40px 0px;
+  list-style: none;
+  outline: none;
+}
+.pagination > .active > a {
+  background-color: #265c4b;
+  border-color: #265c4b;
+  color: #fff;
+}
+.pagination > li > a {
+  border: 1px solid #265c4b;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #265c4b;
+  border-color: #265c4b;
+  outline: none;
+}
+.pagination > li > a,
+.pagination > li > span {
+  color: #265c4b;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span,
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-radius: unset;
+}
+
+.result-page {
+  background-color: #f9f3e5;
+  text-align: center;
+}
+
+.home-page-link {
+  text-decoration: none;
+  font-family: DM-Sans;
+  color: #265c4b;
+  font-size: 60px;
+  font-weight: bold;
+  padding: 90px 0px 30px 0px;
+}
