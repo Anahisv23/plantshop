@@ -6,6 +6,7 @@ const SearchResults = () => {
   const results = useLocation();
   const arrayOfResults = results.state;
 
+
   const handleClick = (result) => {
     navigate("/plantproduct/", { state: result });
   };
@@ -19,16 +20,7 @@ const SearchResults = () => {
       </Link>
       <h1>your • search • results </h1>
       <div className="result-items">
-        {!arrayOfResults ? (
-          <div>
-            <h2 style={{ textAlign: "center" }}>
-              Nothing to see here <span role="img">🥺</span>
-            </h2>
-            <Link to="/">
-              <IoHomeOutline className="single-product-back-home" />
-            </Link>
-          </div>
-        ) : (
+        {arrayOfResults.length !== 0 ? (
           arrayOfResults.map((result) => {
             return (
               <div className="arrange-products">
@@ -49,6 +41,15 @@ const SearchResults = () => {
               </div>
             );
           })
+        ) : (
+          <div>
+            <h2 style={{ textAlign: "center" }}>
+              Nothing to see here <span role="img">🥺</span>
+            </h2>
+            <Link to="/">
+              <IoHomeOutline className="single-product-back-home" />
+            </Link>
+          </div>
         )}
       </div>
     </div>
