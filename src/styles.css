@@ -30,7 +30,7 @@
     text-align: center;
     padding: 70px 70px 700px 70px;
     margin: 0px 0px 0px 0px;
-    color: #265c4b;
+    color: black;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,7 +97,7 @@
     text-align: center;
     padding: 70px 70px 700px 70px;
     margin: 0px 0px 0px 0px;
-    color: #265c4b;
+    color: black;;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -331,7 +331,7 @@ button:hover {
 }
 
 .error-message {
-  color: rgb(109, 26, 26);
+  color: black;
   font-family: DM-Sans;
   text-align: center;
   font-weight: bold;

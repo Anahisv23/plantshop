@@ -38,18 +38,31 @@ const SingleProduct = () => {
   };
 
   const addToCartClick = (plantToAddToCart) => {
+    let cartItemsFromLocalStorage = localStorage.getItem("cartItems");
+    let cartItems = JSON.parse(cartItemsFromLocalStorage) || [];
+
     if (amountUserWants === 0) {
       setUserFeedback("Add a valid quantity");
-    } else {
-      let cartItemsFromLocalStorage = localStorage.getItem("cartItems");
-      let cartItems = JSON.parse(cartItemsFromLocalStorage) || [];
-
+    } else if (cartItems.length === 0) {
       plantToAddToCart.amountUserWants = amountUserWants;
       localStorage.setItem(
         "cartItems",
         JSON.stringify([...cartItems, plantToAddToCart])
       );
       setUserFeedback("Added!");
+    } else if (cartItems.length > 0) {
+      for (let i = 0; i < cartItems.length; i++) {
+        if (cartItems[i].name === plantToAddToCart.name) {
+          setUserFeedback("Item is already in cart")
+        } else {
+          plantToAddToCart.amountUserWants = amountUserWants;
+          localStorage.setItem(
+            "cartItems",
+            JSON.stringify([...cartItems, plantToAddToCart])
+          );
+          setUserFeedback("Added!");
+        }
+      }
     }
   };
 
