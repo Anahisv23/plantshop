@@ -8,10 +8,15 @@ const Cart = () => {
   const navigate = useNavigate();
   const [totalPurchaseCost, setTotalPurchaseCost] = useState(0);
   const [userCartItems, setUserCartItems] = useState([]);
+  const [error, setError] = useState("");
 
   const sendToCheckOut = () => {
-    localStorage.removeItem("cartItems");
-    navigate("/checkout");
+    if (userCartItems.length === 0) {
+      setError("There are no items in your cart");
+    } else {
+      localStorage.removeItem("cartItems");
+      navigate("/checkout");
+    }
   };
 
   useEffect(() => {
@@ -80,6 +85,7 @@ const Cart = () => {
       <div className="purchase-details">
         <h3>Total Purchase Cost ${totalPurchaseCost}</h3>
         <button onClick={sendToCheckOut}>Check Out</button>
+        <p className="error-message">{error}</p>
         <br></br>
         <br></br>
         <Link className="single-product-back-home" to="/">

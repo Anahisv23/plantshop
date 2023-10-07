@@ -329,3 +329,10 @@ button:hover {
   font-weight: bold;
   padding: 90px 0px 30px 0px;
 }
+
+.error-message {
+  color: rgb(109, 26, 26);
+  font-family: DM-Sans;
+  text-align: center;
+  font-weight: bold;
+}
