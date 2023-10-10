@@ -28,7 +28,6 @@ const SearchBar = ({ setProducts }) => {
 
   const handleChange = (e) => {
     setUserInput(e.target.value);
-    console.log("e", e.target.value);
   };
 
   const handleClick = () => {
@@ -36,8 +35,6 @@ const SearchBar = ({ setProducts }) => {
       plantProducts,
       userInput
     );
-
-    console.log("user search algo", productsBasedOnUserSearch);
     navigate("/searchresults/", { state: productsBasedOnUserSearch });
   };
 

@@ -25,7 +25,6 @@ const Cart = () => {
       total += userCartItems[i].price * userCartItems[i].amountUserWants;
     }
 
-    console.log("total", total);
     setTotalPurchaseCost(total);
   }, [userCartItems]);
 
@@ -41,11 +40,9 @@ const Cart = () => {
   }, []);
 
   const removeItemFromCart = (plantToRemove) => {
-    console.log("remove item from cart", plantToRemove);
     const updatedProductsAfterRemoval = userCartItems.filter((plantInCart) => {
       return plantInCart.name !== plantToRemove.name;
     });
-    console.log("after removal", updatedProductsAfterRemoval);
     localStorage.setItem(
       "cartItems",
       JSON.stringify(updatedProductsAfterRemoval)
