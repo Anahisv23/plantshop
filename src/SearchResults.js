@@ -42,10 +42,12 @@ const SearchResults = () => {
             );
           })
         ) : (
-          <div>
+          <div className="no-results">
             <h2 style={{ textAlign: "center" }}>
-              Nothing to see here <span role="img">🥺</span>
+            <span role="img">🥺</span><br></br>
+              hmmm looks like we don't <br></br> have that in stock 
             </h2>
+            <br></br>
             <Link to="/">
               <IoHomeOutline className="single-product-back-home" />
             </Link>

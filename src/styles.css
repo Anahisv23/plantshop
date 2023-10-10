@@ -336,3 +336,9 @@ button:hover {
   text-align: center;
   font-weight: bold;
 }
+
+.no-results {
+  background-color: #f9f3e5;
+  text-align: center;
+  padding-bottom: 600px;
+}
