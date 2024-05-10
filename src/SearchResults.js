@@ -1,5 +1,6 @@
 import { useLocation, useNavigate, Link } from "react-router-dom";
 import { IoHomeOutline } from "react-icons/io5";
+import Navbar from "./Navbar";
 
 const SearchResults = () => {
   const navigate = useNavigate();
@@ -13,11 +14,7 @@ const SearchResults = () => {
 
   return (
     <div className="result-page">
-      <br></br>
-      <br></br>
-      <Link className="home-link" to="/">
-        plant • place
-      </Link>
+     <Navbar/>
       <h1>your • search • results </h1>
       <div className="result-items">
         {arrayOfResults.length !== 0 ? (

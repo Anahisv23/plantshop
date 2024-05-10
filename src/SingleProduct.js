@@ -2,6 +2,7 @@ import { useLocation, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { IoHomeOutline } from "react-icons/io5";
+import Navbar from "./Navbar";
 
 const SingleProduct = () => {
   const plantProduct = useLocation();
@@ -68,7 +69,7 @@ const SingleProduct = () => {
 
   return (
     <div className="single-product">
-      <Link className="home-link" to="/">
+      <Link className="home-page-link" to="/">
         plant • place
       </Link>
       <h1>{name}</h1>

@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { IoHomeOutline } from "react-icons/io5";
 import plantProducts from "./plantData";
 import { useNavigate } from "react-router-dom";
+import Navbar from "./Navbar";
 
 const Cart = () => {
   const navigate = useNavigate();
@@ -52,9 +53,7 @@ const Cart = () => {
 
   return (
     <div className="cart-screen">
-      <Link className="home-link" to="/">
-        plant • place
-      </Link>
+      <Navbar />
       <h1>welcome • to • your • cart </h1>
       {userCartItems.length === 0 ? (
         <h2 style={{ textAlign: "center" }}>

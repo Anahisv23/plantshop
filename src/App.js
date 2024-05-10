@@ -2,10 +2,11 @@ import "./styles.css";
 import { Link } from "react-router-dom";
 import ReactPaginate from "react-paginate";
 import plantProducts from "./plantData";
-import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import SearchBar from "./SearchBar";
+import Navbar from "./Navbar";
 import { useState } from "react";
+import axios from "axios";
 
 const Items = ({ products }) => {
   const navigate = useNavigate();
@@ -55,14 +56,16 @@ export default function App() {
     setOffset(newOffSet);
   };
 
+  // const handleRequest = async () => {
+  //   const isBackendConnected = await axios.get('/api/random/')
+  //   console.log("is backend connected", isBackendConnected)
+  // }
+
   return (
     <div className="App">
-      <Link className="home-page-link" to="/">
-        plant • place
-      </Link>
-      <br></br>
-      <br></br>
-      <SearchBar setProducts={setProducts} />
+      <Navbar />
+      {/* <button onClick={handleRequest}>Click me</button> */}
+
       <br></br>
       <Items products={slice} />
       <ReactPaginate
@@ -78,9 +81,6 @@ export default function App() {
         subContainerClassName={"pages pagination"}
         activeClassName={"active"}
       />
-      <Link className="cart-icon" to="/cart">
-        <AiOutlineShoppingCart />
-      </Link>
     </div>
   );
 }

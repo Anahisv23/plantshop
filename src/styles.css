@@ -2,7 +2,7 @@
   font-family: DM-Sans;
   text-align: center;
   background-color: #f9f3e5;
-  padding: 100px 0px 50px 0px;
+  padding: 0px 0px 50px 0px;
 }
 
 /* Media Queries */
@@ -163,14 +163,6 @@ button {
   width: 100px;
 }
 
-.search-button {
-  border-radius: 10px;
-  height: 33px;
-  width: 50px;
-  margin-left: 10px;
-  border: 1px solid black;
-}
-
 .single-product input {
   font-family: DM-Sans;
   border-radius: 10px;
@@ -183,10 +175,11 @@ input {
   font-family: DM-Sans;
   border-radius: 10px;
   height: 33px;
-  width: 200px;
+  width: 300px;
   padding-left: 10px;
 }
 
+/* cart */
 .add-delete {
   border-radius: 70px;
   background-color: #e3c75f;
@@ -208,26 +201,6 @@ input {
   margin-left: 10px;
   border: none;
   outline: none;
-}
-
-.home-link {
-  text-decoration: none;
-  font-family: DM-Sans;
-  color: #265c4b;
-  font-size: 50px;
-  font-weight: bold;
-  padding: 0px 0px 30px 0px;
-}
-
-a:hover {
-  color: rgb(152, 184, 152);
-}
-
-.single-product-back-home {
-  text-decoration: none;
-  font-family: DM-Sans;
-  color: #265c4b;
-  font-size: 20px;
 }
 
 button:hover {
@@ -321,15 +294,6 @@ button:hover {
   text-align: center;
 }
 
-.home-page-link {
-  text-decoration: none;
-  font-family: DM-Sans;
-  color: #265c4b;
-  font-size: 60px;
-  font-weight: bold;
-  padding: 90px 0px 30px 0px;
-}
-
 .error-message {
   color: black;
   font-family: DM-Sans;
@@ -341,4 +305,64 @@ button:hover {
   background-color: #f9f3e5;
   text-align: center;
   padding-bottom: 600px;
+}
+
+/* nav bar and links */
+.navbar {
+  display: flex; 
+  flex-direction: row;
+  justify-content: space-between;
+  position: sticky;
+  /* background-color: #f3e5c5; */
+  background-color: #f9f3e5;
+  padding: 20px 0px 20px 0px;
+}
+
+.navbar ul {
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+  margin-right: 150px;
+  margin-top: 30px;
+  gap: 30px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.search-button {
+  border-radius: 10px;
+  height: 33px;
+  width: 50px;
+  margin-left: 10px;
+  background-color: #e3c75f;
+  border: 1px solid black;
+}
+
+.home-page-link {
+  text-decoration: none;
+  font-family: DM-Sans;
+  color: #265c4b;
+  margin: 40px 0px 0px 80px;
+  font-size: 60px;
+  font-weight: bold;
+  padding: 0px 0px 30px 0px;
+}
+
+a {
+  text-decoration: none;
+  font-family: DM-Sans;
+  color: #265c4b;
+}
+
+a:hover {
+  color: rgb(152, 184, 152);
+}
+
+.single-product-back-home {
+  text-decoration: none;
+  font-family: DM-Sans;
+  color: #265c4b;
+  font-size: 20px;
 }

@@ -1,12 +1,11 @@
 import { IoHomeOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 const Checkout = () => {
   return (
     <div className="checkout">
-      <Link className="home-link" to="/">
-        plant • place
-      </Link>
+      <Navbar />
       <img src="https://www.huntingforgeorge.com/wp-content/uploads/Feature-Best-Winter-Plants-Hunting-for-George-Community-Journal-extra.jpg"></img>
       <h2>
         Thank you for your purchase<br></br> See you again soon!
