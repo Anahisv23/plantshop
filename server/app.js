@@ -34,6 +34,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api', require('./api'))
+app.use("/auth", require('./auth'))
 
 // Start the server
 app.listen(port, () => {
