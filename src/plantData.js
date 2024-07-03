@@ -2,6 +2,9 @@ const plantProducts = [
   {
     name: "Monstera",
     id: "M1",
+    skillLevel: "Beginner",
+    plantSize: "Large", 
+    petSafe: false,
     price: 25,
     description:
       "The monstera, nicknamed the Swiss cheese plant because of its unique appearance, belongs to the arum (Araceae) family, which finds its roots in the American tropics. Wild monsteras are dispersed across the Caribbean, Florida, Asia, and Australia, as well as western Mediterranean areas like Portugal and Morocco. There are over 50 varieties of this climbing vine, but Monstera deliciosa and rhaphidophora tend to be the most popular indoor varieties",
@@ -13,6 +16,9 @@ const plantProducts = [
   {
     name: "Arrow Head",
     id: "A1",
+    skillLevel: "Beginner",
+    plantSize: "Small", 
+    petSafe: false,
     price: 15,
     description:
       "The arrowhead plant is a fast-growing, pretty, trailing or climbing vine. The simple arrow-shaped leaves vary in hue depending on their age, ranging from dark green and white to lime green and bright pink. Arrowhead vine grows best as a houseplant in bright, indirect light, well-draining potting soil, and warm, humid conditions",
@@ -24,6 +30,9 @@ const plantProducts = [
   {
     name: "Rubber Plant",
     id: "R1",
+    skillLevel: "Intermediate",
+    plantSize: "Large", 
+    petSafe: false,
     price: 30,
     description:
       "Ficus elastica, also known as the rubber plant, is an unusual-looking varietal native to the tropics of Southeast Asia. This long-lived plant boasts oversized, oval-shaped leaves with a rich emerald hue and can grow quickly, reaching up to 100 feet tall in its natural habitat. It's not the easiest plant for beginners because it's not very forgiving if it doesn't get the care it needs. However, it's more often grown indoors as a houseplant, where it can be planted and cared for year-round, and its size is kept more manageable.",
@@ -35,6 +44,9 @@ const plantProducts = [
   {
     name: "Golden Pothos",
     id: "G1",
+    skillLevel: "Beginner",
+    plantSize: "Medium", 
+    petSafe: false,
     price: 10,
     description:
       "Pothos (Epipremnum aureum) is a tropical vine native to the Solomon Islands in the South Pacific, but you probably know it best seen trailing off of shelves and desks. Pothos is commonly grown as a houseplant, boasting pointed, heart-shaped green leaves that are sometimes variegated with white, yellow, or pale green striations.",
@@ -46,6 +58,9 @@ const plantProducts = [
   {
     name: "Rubber Plant (Tineke)",
     id: "R2",
+    skillLevel: "Intermediate",
+    plantSize: "Large", 
+    petSafe: false,
     price: 18,
     description:
       "The Rubber Plant (Ficus elastica Tineke) is a stunning variation of the classic Rubber Plant. It features attractive variegated leaves with creamy-white streaks. This indoor plant not only adds a touch of elegance but also purifies the air in your home.",
@@ -56,6 +71,9 @@ const plantProducts = [
   {
     name: "Fern",
     id: "B1",
+    skillLevel: "Intermediate",
+    plantSize: "Large", 
+    petSafe: true,
     price: 13,
     description:
       "The Boston Fern (Nephrolepis exaltata) is a classic choice for indoor greenery. With its delicate, feathery fronds, it adds a touch of elegance to any room. Boston Ferns thrive in moderate to high humidity and indirect light.",
@@ -67,6 +85,9 @@ const plantProducts = [
   {
     name: "Peace Lily",
     id: "P1",
+    skillLevel: "Beginner",
+    plantSize: "Medium", 
+    petSafe: false,
     price: 14,
     description:
       "The Peace Lily (Spathiphyllum) is a graceful indoor plant with lush, dark green leaves and elegant white blooms. It's known for its air-purifying properties and symbolizes peace and tranquility.",
@@ -78,6 +99,9 @@ const plantProducts = [
   {
     name: "Aloe Vera",
     id: "A2",
+    skillLevel: "Beginner",
+    plantSize: "Small", 
+    petSafe: false,
     price: 9,
     description:
       "Aloe Vera is a succulent plant known for its medicinal properties. Its gel is used for various skin and health benefits. It's easy to care for and adds a touch of green to your home.",
@@ -89,6 +113,9 @@ const plantProducts = [
   {
     name: "Snake Plant",
     id: "S1",
+    skillLevel: "Beginner",
+    plantSize: "Large", 
+    petSafe: false,
     price: 12,
     description:
       "Snake plant (Sansevieria trifasciata) is a hardy and low-maintenance indoor plant known for its upright, sword-like leaves. It's an excellent air purifier and can thrive in a variety of lighting conditions, making it a popular choice for beginners.",
@@ -100,17 +127,23 @@ const plantProducts = [
   {
     name: "Fiddle Leaf Fig",
     id: "F1",
+    skillLevel: "Advanced",
+    plantSize: "Large", 
+    petSafe: false,
     price: 25,
     description:
       "The fiddle leaf fig (Ficus lyrata) is a trendy indoor plant with large, violin-shaped leaves. It's a favorite among interior designers and plant enthusiasts for its elegant appearance.",
     image:
-      "https://plantsexpress.com/cdn/shop/products/Fiddle-Leaf-Fig-2.jpg?v=1684454730",
+      "https://images.unsplash.com/photo-1453904300235-0f2f60b15b5d?q=80&w=2660&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     quantity: 10,
     alt: "Fiddle Leaf Fig Plant."
   },
   {
     name: "Succulent Assortment",
     id: "S2",
+    skillLevel: "Beginner",
+    plantSize: "Small", 
+    petSafe: true,
     price: 8,
     description:
       "This assortment includes a variety of colorful and low-maintenance succulents. Succulents are known for their unique shapes and are perfect for adding a touch of greenery to your home or office.",
@@ -122,6 +155,9 @@ const plantProducts = [
   {
     name: "Jade Plant",
     id: "J1",
+    skillLevel: "Beginner",
+    plantSize: "Large", 
+    petSafe: false,
     price: 14,
     description:
       "The Jade Plant (Crassula ovata) is a succulent known for its thick, oval-shaped leaves. It's considered a symbol of good luck and is easy to care for as a houseplant.",
@@ -133,6 +169,9 @@ const plantProducts = [
   {
     name: "Lavender",
     id: "L1",
+    skillLevel: "Beginner",
+    plantSize: "medium", 
+    petSafe: true,
     price: 11,
     description:
       "Lavender (Lavandula) is a fragrant herb known for its beautiful purple flowers and soothing scent. It's commonly used in aromatherapy and can be grown both indoors and outdoors.",
@@ -144,6 +183,9 @@ const plantProducts = [
   {
     name: "Spider Plant",
     id: "S3",
+    skillLevel: "Beginner",
+    plantSize: "Medium", 
+    petSafe: true,
     price: 10,
     description:
       "The Spider Plant (Chlorophytum comosum) is a popular indoor plant known for its arching, variegated leaves. It's a great choice for beginners and helps improve indoor air quality.",
@@ -155,6 +197,9 @@ const plantProducts = [
   {
     name: "Pothos Marble Queen",
     id: "P2",
+    skillLevel: "Beginner",
+    plantSize: "Small", 
+    petSafe: false,
     price: 12,
     description:
       "The Pothos Marble Queen (Epipremnum aureum) is a striking variation of the classic Pothos plant. It has marbled green and white leaves, making it a stylish choice for homes and offices.",
@@ -166,6 +211,9 @@ const plantProducts = [
   {
     name: "Money Tree",
     price: 19,
+    skillLevel: "Beginner",
+    plantSize: "Large", 
+    petSafe: true,
     description:
       "The Money Tree (Pachira aquatica) is a popular indoor plant with braided trunks and palmate leaves. It's believed to bring good luck and prosperity and is an attractive addition to any space.",
     image:
@@ -176,6 +224,9 @@ const plantProducts = [
   {
     name: "Rubber Plant Red Ruby",
     price: 22,
+    skillLevel: "Intermediate",
+    plantSize: "Large", 
+    petSafe: false,
     description:
       "The Rubber Plant Red Ruby (Ficus elastica Red Ruby) is a stunning variation of the Rubber Plant with deep red and green leaves. It's a striking choice for adding a touch of color to your indoor space.",
     image: "https://www.plantvine.com/plants/Ficus-Ruby-1G-800x1000.jpg",
@@ -185,6 +236,9 @@ const plantProducts = [
   {
     name: "Anthurium",
     price: 18,
+    skillLevel: "Intermediate",
+    plantSize: "Advanced", 
+    petSafe: false,
     description:
       "Anthurium, also known as the Flamingo Flower, is an exotic indoor plant with heart-shaped, vibrant red or pink flowers. It's known for its striking appearance and long-lasting blooms.",
     image:
@@ -195,6 +249,9 @@ const plantProducts = [
   {
     name: "Rubber Plant Burgundy",
     price: 20,
+    skillLevel: "Intermediate",
+    plantSize: "Large", 
+    petSafe: false,
     description:
       "The Rubber Plant Burgundy (Ficus elastica Burgundy) is another beautiful variety of the Rubber Plant with deep burgundy leaves. It adds a touch of elegance to your interior space.",
     image:
@@ -205,6 +262,9 @@ const plantProducts = [
   {
     name: "Cactus",
     price: 7,
+    skillLevel: "Intermediate",
+    plantSize: "Small", 
+    petSafe: false,
     description:
       "Cacti are unique and low-maintenance succulent plants known for their spiky appearance. They come in various shapes and sizes, making them a popular choice for modern decor.",
     image:
@@ -214,6 +274,9 @@ const plantProducts = [
   },
   {
     name: "Alocasia Polly",
+    skillLevel: "Advanced",
+    plantSize: "Large", 
+    petSafe: false,
     price: 16,
     description:
       "Alocasia Polly, also known as African Mask Plant, is a stunning indoor plant with arrow-shaped leaves. Its striking appearance and low-maintenance nature make it a popular choice.",
@@ -225,6 +288,9 @@ const plantProducts = [
   {
     name: "String of Pearls",
     price: 11,
+    skillLevel: "Intermediate",
+    plantSize: "Medium", 
+    petSafe: false,
     description:
       "String of Pearls (Senecio rowleyanus) is a charming succulent with trailing stems adorned with small, bead-like leaves. It's a unique and eye-catching addition to your plant collection.",
     image:
@@ -235,6 +301,9 @@ const plantProducts = [
   {
     name: "Snake Plant Black Coral",
     price: 14,
+    skillLevel: "Beginner",
+    plantSize: "Large", 
+    petSafe: false,
     description:
       "The Snake Plant Black Coral (Sansevieria trifasciata) is a striking indoor plant with dark green, almost black leaves. It's an excellent air purifier and adds a touch of elegance to any space.",
     image:
@@ -245,6 +314,9 @@ const plantProducts = [
   {
     name: "Prayer Plant",
     price: 12,
+    skillLevel: "Advanced",
+    plantSize: "Small", 
+    petSafe: true,
     description:
       "The Prayer Plant (Maranta leuconeura) is a beautiful indoor plant with striking variegated leaves that fold up at night, resembling hands in prayer. It's known for its unique foliage patterns and is a favorite among plant enthusiasts.",
     image:
@@ -255,6 +327,9 @@ const plantProducts = [
   {
     name: "Monstera Adansonii",
     price: 18,
+    skillLevel: "Intermediate",
+    plantSize: "Large", 
+    petSafe: false,
     description:
       "Monstera Adansonii, also known as the Swiss Cheese Vine, is a unique indoor plant with small, heart-shaped leaves covered in distinctive perforations. It's an excellent choice for those looking for an eye-catching trailing plant.",
     image: "https://www.plantvine.com/plants/Monstera-Adansonii2-800x1000.jpg",

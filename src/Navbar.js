@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import SearchBar from "./SearchBar";
+import axios from "axios"
 
 const Navbar = () => {
   return (
     <div>
       <nav className="navbar">
-        <Link className="home-page-link" to="/">
+        <Link className="home-page-link-nav" to="/">
           plant • place
         </Link>
         <ul>
@@ -14,10 +15,10 @@ const Navbar = () => {
             <SearchBar />
           </li>
           <li>
-            <Link>login</Link>
+            <Link to="/login">login</Link>
           </li>
           <li>
-            <Link>sign up</Link>
+            <Link to="/signup">sign up</Link>
           </li>
           <li>
             <Link className="cart-icon" to="/cart">

@@ -15,19 +15,19 @@ const SearchResults = () => {
   return (
     <div className="result-page">
      <Navbar/>
-      <h1>your • search • results </h1>
+      <h1>Your Search Results </h1>
       <div className="result-items">
         {arrayOfResults.length !== 0 ? (
           arrayOfResults.map((result) => {
             return (
               <div className="arrange-products">
-                <h2>{result.name}</h2>
                 <img
                   src={result.image}
                   alt={result.alt}
                   height="250px"
                   width="250px"
                 ></img>
+                <h2>{result.name}</h2>
                 <button
                   onClick={() => {
                     handleClick(result);
@@ -42,7 +42,7 @@ const SearchResults = () => {
           <div className="no-results">
             <h2 style={{ textAlign: "center" }}>
             <span role="img">🥺</span><br></br>
-              hmmm looks like we don't <br></br> have that in stock 
+              Hmmm looks like we don't <br></br> have that in stock 
             </h2>
             <br></br>
             <Link to="/">

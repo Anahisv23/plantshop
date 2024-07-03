@@ -4,7 +4,7 @@ const { db } = require('../db');
 const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
-const secret = process.env.JWT;
+const secret = `${process.env.JWT}`
 
 const User = db.define('User', {
   firstName: {
@@ -44,6 +44,7 @@ User.prototype.correctPassword = function (candidatePwd) {
 };
 
 User.prototype.generateToken = function () {
+  console.log("generated token")
   return jwt.sign({ id: this.id }, secret);
 };
 

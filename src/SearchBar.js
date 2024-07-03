@@ -42,11 +42,11 @@ const SearchBar = ({ setProducts }) => {
     <div>
       <input
         type="text"
-        placeHolder=" Search plants in stock..."
+        placeholder=" Search plants in stock..."
         onChange={handleChange}
         value={userInput}
       ></input>
-      <button onClick={handleClick} class="search-button">
+      <button onClick={handleClick} className="search-button">
         <span role="img">🔍</span>
       </button>
     </div>

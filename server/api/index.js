@@ -1,8 +1,8 @@
 const router = require('express').Router()
-const randomRouter = require("./random")
+const userRouter = require("./users")
 
 
-router.use('/random', randomRouter)
+router.use('/users', userRouter)
 
 router.use((req, res, next) => {
     const error = new Error('Not Found')

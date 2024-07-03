@@ -54,7 +54,7 @@ const Cart = () => {
   return (
     <div className="cart-screen">
       <Navbar />
-      <h1>welcome • to • your • cart </h1>
+      <h1>Welcome to your cart </h1>
       {userCartItems.length === 0 ? (
         <h2 style={{ textAlign: "center" }}>
           Nothing to see here <span role="img">🥺</span>
@@ -79,7 +79,7 @@ const Cart = () => {
         })
       )}
       <div className="purchase-details">
-        <h3>Total Purchase Cost ${totalPurchaseCost}</h3>
+        <h4>Total Purchase Cost ${totalPurchaseCost}</h4>
         <button onClick={sendToCheckOut}>Check Out</button>
         <p className="error-message">{error}</p>
         <br></br>
