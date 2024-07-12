@@ -12,9 +12,6 @@ const Navbar = () => {
         </Link>
         <ul>
           <li>
-            <SearchBar />
-          </li>
-          <li>
             <Link to="/login">login</Link>
           </li>
           <li>
@@ -22,7 +19,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link className="cart-icon" to="/cart">
-              <AiOutlineShoppingCart />
+              cart
             </Link>
           </li>
         </ul>

@@ -1,10 +1,11 @@
 import "./styles.css";
 import ReactPaginate from "react-paginate";
 import plantProducts from "./plantData";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import { useState, createContext, useEffect } from "react";
 import axios from "axios";
+import LandingPage from "./LandingPage";
 
 export const Items = ({ products }) => {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ export const Items = ({ products }) => {
     <div className="items">
       {products.map((plant) => (
         <div className="one-item" key={plant.name}>
-          <img
+           <img
             src={plant.image}
             alt={plant.alt}
             height="250px"
@@ -84,6 +85,8 @@ export default function App() {
       >
         <Navbar />
         <br></br>
+        <LandingPage />
+        <hr></hr>
         <Items products={slice} />
 
         <ReactPaginate

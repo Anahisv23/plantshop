@@ -9,6 +9,7 @@ import SearchResults from "./SearchResults";
 import Login from "./Login";
 import Signup from "./Signup";
 import Quiz from "./Quiz";
+import LandingPage from "./LandingPage";
 
 const router = createBrowserRouter([
   {
