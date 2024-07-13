@@ -42,7 +42,7 @@ const SearchBar = ({ setProducts }) => {
     <div>
       <input
         type="text"
-        placeholder=" Search your magical plants..."
+        placeholder=" Search our magical plants..."
         onChange={handleChange}
         value={userInput}
       ></input>
