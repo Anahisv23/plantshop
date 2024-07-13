@@ -1,7 +1,7 @@
 import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
-import { Items } from "./App";
+import HousePlants from "./HousePlants";
 import SingleProduct from "./SingleProduct";
 import Cart from "./Cart";
 import Checkout from "./Checkout";
@@ -9,7 +9,8 @@ import SearchResults from "./SearchResults";
 import Login from "./Login";
 import Signup from "./Signup";
 import Quiz from "./Quiz";
-import LandingPage from "./LandingPage";
+import PlantTools from "./PlantTools";
+
 
 const router = createBrowserRouter([
   {
@@ -46,8 +47,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/products",
-    element: <Items />,
+    element: <HousePlants />,
   },
+  {
+    path: "/plant-tools",
+    element: <PlantTools />
+  }
 ]);
 
 export { router, RouterProvider };

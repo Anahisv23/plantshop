@@ -1,10 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
 import axios from "axios";
-import { CurrentUserContext } from "./App";
+// import { CurrentUserContext } from "./App";
 
 const Signup = () => {
-  const { currentUser, setCurrentUser } = useContext(CurrentUserContext);
+  // const { currentUser, setCurrentUser } = useContext(CurrentUserContext);
   const navigate = useNavigate();
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -77,7 +77,7 @@ const Signup = () => {
           marketingEmails,
         });
         // set current user context to 
-        setCurrentUser(response.data);
+        // setCurrentUser(response.data);
         // set all inputs back to empty or false
         setFirstName("");
         setLastName("");

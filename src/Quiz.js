@@ -4,20 +4,20 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 
 const Quiz = () => {
-  const [currentUser, setCurrentUser] = useState("");
+  // const [currentUser, setCurrentUser] = useState("");
 
-  useEffect(() => {
-    console.log("trying to get current user");
-    const getCurrentUser = async () => {
-      try {
-        const response = await axios.get("/auth/current");
-        setCurrentUser(response.data);
-      } catch (error) {
-        console.error("Failed to fetch current user", error);
-      }
-    };
-    getCurrentUser();
-  }, []);
+  // useEffect(() => {
+  //   console.log("trying to get current user");
+  //   const getCurrentUser = async () => {
+  //     try {
+  //       const response = await axios.get("/auth/current");
+  //       setCurrentUser(response.data);
+  //     } catch (error) {
+  //       console.error("Failed to fetch current user", error);
+  //     }
+  //   };
+  //   getCurrentUser();
+  // }, []);
 
   const handleSubmit = () => {
     console.log("handle submit");
@@ -27,9 +27,9 @@ const Quiz = () => {
       <Link className="home-page-link" to="/">
         plant • place
       </Link>
-      <h1>
+      {/* <h1>
         Welcome {currentUser.firstName}
-      </h1>
+      </h1> */}
       <img
         alt="Picture of an iPad on desk that is surrounded by plants"
         src="https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

@@ -22,6 +22,16 @@ const Navbar = () => {
               cart
             </Link>
           </li>
+          <li>
+            <Link className="cart-icon" to="/products">
+              houseplants
+            </Link>
+          </li>
+          <li>
+            <Link className="cart-icon" to="/plant-tools">
+              plant tools
+            </Link>
+          </li>
         </ul>
       </nav>
       <hr></hr>
