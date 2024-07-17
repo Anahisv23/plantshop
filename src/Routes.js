@@ -10,49 +10,89 @@ import Login from "./Login";
 import Signup from "./Signup";
 import Quiz from "./Quiz";
 import PlantTools from "./PlantTools";
-
+import Layout from "./Layout";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: (
+      <Layout>
+        <App />
+      </Layout>
+    ),
   },
   {
     path: "/plantproduct",
-    element: <SingleProduct />,
+    element: (
+      <Layout>
+        <SingleProduct />
+      </Layout>
+    ),
   },
   {
     path: "/cart",
-    element: <Cart />,
+    element: (
+      <Layout>
+        <Cart />
+      </Layout>
+    ),
   },
   {
     path: "/checkout",
-    element: <Checkout />,
+    element: (
+      <Layout>
+        <Checkout />
+      </Layout>
+    ),
   },
   {
     path: "/searchresults",
-    element: <SearchResults />,
+    element: (
+      <Layout>
+        <SearchResults />
+      </Layout>
+    ),
   },
   {
     path: "/login",
-    element: <Login />,
+    element: (
+      <Layout>
+        <Login />
+      </Layout>
+    ),
   },
   {
     path: "/signup",
-    element: <Signup />,
+    element: (
+      <Layout>
+        <Signup />
+      </Layout>
+    ),
   },
   {
     path: "/plant-quiz",
-    element: <Quiz />,
+    element: (
+      <Layout>
+        <Quiz />
+      </Layout>
+    ),
   },
   {
     path: "/products",
-    element: <HousePlants />,
+    element: (
+      <Layout>
+        <HousePlants />
+      </Layout>
+    ),
   },
   {
     path: "/plant-tools",
-    element: <PlantTools />
-  }
+    element: (
+      <Layout>
+        <PlantTools />
+      </Layout>
+    ),
+  },
 ]);
 
 export { router, RouterProvider };

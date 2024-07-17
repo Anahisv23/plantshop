@@ -1,9 +1,5 @@
-import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { IoHomeOutline } from "react-icons/io5";
-import plantProducts from "./plantData";
 import { useNavigate } from "react-router-dom";
-import Navbar from "./Navbar";
 
 const Cart = () => {
   const navigate = useNavigate();
@@ -53,7 +49,6 @@ const Cart = () => {
 
   return (
     <div className="cart-screen">
-      <Navbar />
       <h1>Welcome to your cart </h1>
       {userCartItems.length === 0 ? (
         <h2 style={{ textAlign: "center" }}>
@@ -84,9 +79,6 @@ const Cart = () => {
         <p className="error-message">{error}</p>
         <br></br>
         <br></br>
-        <Link className="single-product-back-home" to="/">
-          <IoHomeOutline />
-        </Link>
       </div>
     </div>
   );

@@ -73,7 +73,7 @@ const BestSellers = () => {
       <div className="best-sellers">
         {bestSellers.map((bestSeller) => {
           return (
-            <div className="best-seller">
+            <div className="best-seller" key={bestSeller.id}>
               <img src={bestSeller.image}></img>
               <h2>{bestSeller.name}</h2>
               <button

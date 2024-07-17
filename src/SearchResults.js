@@ -14,7 +14,6 @@ const SearchResults = () => {
 
   return (
     <div className="result-page">
-     <Navbar/>
       <h1>Your Search Results </h1>
       <div className="result-items">
         {arrayOfResults.length !== 0 ? (

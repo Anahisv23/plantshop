@@ -28,7 +28,6 @@ export const HousePlants = () => {
 
   return (
     <div className="items-page">
-       <Navbar />
       <h1>Shop our houseplants</h1>
       <div className="items">
         {slice.map((plant) => (

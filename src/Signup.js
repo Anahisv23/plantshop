@@ -1,10 +1,10 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
 import axios from "axios";
-// import { CurrentUserContext } from "./App";
+import { UserContext } from "./UserContext";
 
 const Signup = () => {
-  // const { currentUser, setCurrentUser } = useContext(CurrentUserContext);
+  const { setUser, setToken} = useContext(UserContext);
   const navigate = useNavigate();
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -68,7 +68,7 @@ const Signup = () => {
       ) {
         setError("");
         // connect to backend
-        console.log("sending to backend");
+        console.log("in signup sending to backend");
         const response = await axios.post("/auth/signup", {
           firstName,
           lastName,
@@ -76,8 +76,12 @@ const Signup = () => {
           password,
           marketingEmails,
         });
-        // set current user context to 
-        // setCurrentUser(response.data);
+        console.log("in signup return from backend", response.data);
+        // set current user context to
+       console.log("response", response.data)
+        setUser(response.data)
+        setToken(response.data.token)
+
         // set all inputs back to empty or false
         setFirstName("");
         setLastName("");
@@ -86,11 +90,12 @@ const Signup = () => {
         setMarketingEmails(false);
         setShowPassword(false);
         // redirect to quiz or homepage depending on if they wanted marketing emails
-        console.log("respose", response)
 
         if (response.data.marketingEmails) {
+          console.log("going to quiz");
           navigate("/plant-quiz");
         } else {
+          console.log("going to homepage");
           navigate("/");
         }
       }
@@ -105,9 +110,6 @@ const Signup = () => {
   };
   return (
     <div className="signup-page">
-      <Link className="home-page-link" to="/">
-        plant • place
-      </Link>
       <div className="signup-form">
         <h1>Create an account</h1>
         <form onSubmit={handleSubmit}>
@@ -171,7 +173,11 @@ const Signup = () => {
           ></input>
 
           <p>{error}</p>
-          <input className="signup-button" type="submit" value="Sign-up"></input>
+          <input
+            className="signup-button"
+            type="submit"
+            value="Sign-up"
+          ></input>
         </form>
       </div>
     </div>

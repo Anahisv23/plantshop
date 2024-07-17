@@ -4,14 +4,14 @@ const jwt = require("jsonwebtoken");
 
 
 // Make sure current user is authorized
-const authenticationMiddleware = (req, res, next) => {
-  console.log("in auth middleware", req.session.user)
-  if (req.session.user) {
-    next();
-  } else {
-    res.status(401).send("Unauthorized");
-  }
-};
+// const authenticationMiddleware = (req, res, next) => {
+//   console.log("in auth middleware", req.session)
+//   if (req.session.user) {
+//     next();
+//   } else {
+//     res.status(401).send("Unauthorized");
+//   }
+// };
 
 authRouter.post("/login", async (req, res, next) => {
   try {
@@ -20,7 +20,7 @@ authRouter.post("/login", async (req, res, next) => {
     await user.update({ token: token });
 
     req.session.user = { id: user.id, email: user.email, firstName: user.firstName, marketingEmails: user.marketingEmails };
-    console.log("logged in")
+    console.log("-----in login backend route")
 
     res.status(200).send(user);
   } catch (err) {
@@ -35,7 +35,7 @@ authRouter.post("/login", async (req, res, next) => {
 authRouter.post("/signup", async (req, res, next) => {
   try {
     const { firstName, lastName, email, password, marketingEmails } = req.body;
-
+    
     const user = await User.create({
       firstName,
       lastName,
@@ -43,11 +43,11 @@ authRouter.post("/signup", async (req, res, next) => {
       password,
       marketingEmails,
     });
-
+    
     const token = await user.generateToken()
     user.update({ token: token });
-    req.session.user = { id: user.id, email: user.email, firstName: user.firstName, marketingEmails: user.marketingEmails };
-
+  
+    console.log("-----in sign up backend route", user)
     res.status(201).send(user);
   } catch (err) {
     if (err.name === "SequelizeUniqueConstraintError") {
@@ -59,7 +59,7 @@ authRouter.post("/signup", async (req, res, next) => {
 });
 
 // Route to get the current user
-authRouter.get("/current", authenticationMiddleware, async (req, res, next) => {
+authRouter.get("/current", async (req, res, next) => {
   try {
     console.log("getting current user")
     res.status(200).send(req.session.user);

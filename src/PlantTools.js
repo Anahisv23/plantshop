@@ -38,7 +38,6 @@ const plantTools = [
 const PlantTools = () => {
   return (
     <div className="plant-tools-div">
-      <Navbar />
       <div className="plant-tools-page">
         <hr></hr>
         <h1>Shop our plant tools</h1>

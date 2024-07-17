@@ -1,8 +1,5 @@
 import { useLocation, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { AiOutlineShoppingCart } from "react-icons/ai";
-import { IoHomeOutline } from "react-icons/io5";
-import Navbar from "./Navbar";
 
 const SingleProduct = () => {
   const plantProduct = useLocation();
@@ -69,9 +66,6 @@ const SingleProduct = () => {
 
   return (
     <div className="single-product">
-      <Link className="home-page-link" to="/">
-        plant • place
-      </Link>
       <h1>{name}</h1>
       <img src={image} alt={alt} height="250px" width="250px"></img>
       <h2>About</h2>
@@ -108,14 +102,6 @@ const SingleProduct = () => {
       <h4>{userFeedback}</h4>
       <br></br>
       <br></br>
-      <div className="single-product-icons">
-        <Link className="single-product-back-home" to="/">
-          <IoHomeOutline />
-        </Link>
-        <Link className="cart-icon" to="/cart">
-          <AiOutlineShoppingCart />
-        </Link>
-      </div>
     </div>
   );
 };
