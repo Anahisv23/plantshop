@@ -624,7 +624,6 @@ a {
 .login-page {
   background-color: #f9f3e5;
   padding-top: 30px;
-  padding-bottom: 30px;
 }
 
 .login-form form {
@@ -632,6 +631,7 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 300px;
   gap: 10px;
 }
 
