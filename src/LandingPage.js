@@ -1,6 +1,7 @@
 // Landing page carousel
 import { useState, useEffect } from "react"
 import SearchBar from "./SearchBar";
+import { Helmet } from 'react-helmet-async';
 import { UserContext } from "./UserContext";
 
 
@@ -20,6 +21,11 @@ const LandingPage = () => {
 
   return (
     <div className="landing-page">
+      <Helmet>
+      <title>Houseplants and plant tools</title>
+      <meta name='description' content='A website for affordable houseplants and plant tools' />
+      <meta name="keywords" content="houseplants, plants, plant tools, affordable, aesthetic, gardening" />
+      </Helmet>
        <div className="landing-page-div1">
         <img className="landing-page-image"
           src={currentImage}
